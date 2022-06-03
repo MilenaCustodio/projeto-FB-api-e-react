@@ -1,0 +1,108 @@
+(1) /POST       /usuario/login
+
+request body
+{
+    "email":"",
+    "senha": ""
+}
+
+response
+{
+    "id":0,
+    "email":"",
+    "nome": ""
+}
+
+///////////////////////////////////////////
+
+(2) /POST       /comanda
+
+request body
+{
+    
+    "nome": "",
+    "quantidade": 0,
+    "mesa": 0,
+    "codigo": ,
+    "data": "2020-10-00",
+    "descricao": "",
+    "valor": 0.0, 
+    "usuario": 0
+    
+}
+
+response
+{
+    "id": 1,
+    "nome": "",
+    "quantidade": 0,
+    "mesa": 0,
+    "codigo": ,
+    "data": "2020-10-00",
+    "descricao": "",
+    "valor": 0.0, 
+    "usuario": 0
+}
+
+///////////////////////////////////////////
+
+
+(3) /PUT         /comanda/:id
+
+request (200) 
+{
+    "nome": "",
+    "quantidade": 0,
+    "mesa": 0,
+    "codigo": ,
+    "data": "2020-10-00",
+    "descricao": "",
+    "valor": 0.0, 
+    "usuario": 0
+}
+
+
+response (204)
+-- sem conteudo
+
+
+//////////////////////////////////////
+
+(4) /DELETE     /comanda/:id
+ response (204)
+
+////////////////////////////////////////
+
+(5) /GET        /comanda/busca?codigo=xx
+
+response
+[
+    {
+        "nome": "",
+        "quantidade": 0,
+        "mesa": 0,
+        "codigo": ,
+        "data": "2020-10-00",
+        "valor": 0.0, 
+        "usuario": 0
+    }
+]
+
+
+///////////////////////////////////
+
+
+(6) /GET        /filme/:id
+
+response
+[
+    {
+       "nome": "",
+        "quantidade": 0,
+        "mesa": 0,
+        "codigo": ,
+        "data": "2020-10-00",
+        "valor": 0.0, 
+        "usuario": 0
+    }
+]
