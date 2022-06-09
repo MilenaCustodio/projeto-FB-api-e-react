@@ -1,7 +1,7 @@
 import{ inserirComanda, buscarPorId, removerComanda, alterarComanda }from '../repository/filmeRepository.js';
 
 import { Router } from 'express'
-import { removerComanda } from '../repository/projetoRepository.js';
+
 const server = Router();
 
 server.post('/comanda', async (req, resp) =>{
