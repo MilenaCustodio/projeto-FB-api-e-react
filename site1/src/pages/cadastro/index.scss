@@ -1,0 +1,153 @@
+.page-cadastro{
+
+    .main{
+        display: flex;
+        flex-direction: row;
+        
+    
+    }
+    
+    .head{
+        display: flex;
+        flex-direction: row;
+        background-color: #F8CA00;
+        height: 17vh;
+    }
+    
+    .logo{
+        margin-top: 15px;
+        height: 8em;
+    }
+    
+    .menu-right{
+        display: flex;
+        flex-direction: column;
+        background-color: #404040;
+        width: 40vh;
+        height: 100vh;
+    
+    }
+    
+    .background{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        background-color: #000000;
+        width: 200vh;
+        height: 100vh; 
+    }
+    
+    .img-adm{
+        width: 8em;
+        height: 8em;
+        border-radius: 10em;
+    }
+    
+    .adm-area{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .adm-margin{
+        margin: 1em !important; 
+    }
+    
+    .subt1{
+        color: #ffffff;
+        font-size: 2em;
+        margin: 0.5em;
+    }
+    
+    hr{
+        color: #BABABA;
+        width: 18em;
+    }
+    
+    .left-buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .cod-buttons{
+        display: flex;
+        flex-direction: row;
+        padding: 2em;
+    
+    }
+    
+    .box-cod{
+        background-color: #ffffff;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-right: 3em;
+        padding-left: 0.5em;
+    
+    }
+    
+    .button-cod{
+        background-color: #c4c4c4;
+        padding-top: 0.5em;
+        padding-left: 0.5em;
+        padding-right: 00.5em;
+        border: 4px solid #ffffff;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    
+    .boxes{
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+    
+    }
+    
+    .subt{
+        color: #ffffff;
+    }
+    
+    .select-box{
+        background-color: #c4c4c4;
+        padding: 0.2em;
+        margin-bottom: 0.5em;
+        border: 4px solid #ffffff;
+        width: 20em;
+        height: 3em;
+        cursor: pointer;
+    }
+    
+    .date{
+        padding: 0.5em;
+        width: 15em;
+        font-size: 1.2em;
+    }
+    
+    .right-buttons{
+        display: flex;
+        flex-direction: column;
+        margin-right: 1em;
+        
+    }
+    
+    .buttons-cadastro{
+        background-color: #c4c4c4;
+        padding: 0.2em;
+        margin-bottom: 1em;
+        border: 4px solid #ffffff;
+        width: 10em;
+        border-radius: 1em;
+        text-align: center;
+        margin-top: 1em;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    
+    .end{
+        margin-top: 15em;
+    }
+    
+
+
+
+}

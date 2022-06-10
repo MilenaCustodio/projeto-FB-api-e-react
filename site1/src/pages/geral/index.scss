@@ -1,0 +1,128 @@
+.page-geral{
+
+    .main{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    
+    .head{
+        display: flex;
+        flex-direction: row;
+        background-color: #F8CA00;
+        height: 17vh;
+    }
+    
+    .logo{
+        margin-top: 15px;
+        height: 8em;
+    }
+    
+    .menu-right{
+        display: flex;
+        flex-direction: column;
+        background-color: #404040;
+        width: 40vh;
+        height: 100vh;
+        
+    }
+    
+    .background{
+        display: flex;
+        flex-direction: column;
+    
+        background-color: #000000;
+        width: 200vh;
+        height: 100vh;
+    }
+    
+    .cont-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+    
+    .main-header{
+        width: 100%;
+        text-align: center;
+        height: 80px;
+    }
+    
+    .input-date-header{
+        width: 18em;
+        height: 4em;
+        background-color: #BABABA;
+    }
+    
+    .main-header > hr{
+        margin-top: 0.5em;
+        background-color:  #BABABA;
+        
+    }
+    
+    .cont-header > h4{
+        padding-top: 0.5em;
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 7px;
+        text-align: center;
+    
+        color: #FFFFFF;
+    }
+    
+    .img-adm{
+        width: 8em;
+        height: 8em;
+        border-radius: 10em;
+    }
+    
+    .adm-area{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .adm-margin{
+        margin: 1em !important; 
+    }
+    
+    .subt1{
+        color: #ffffff;
+        font-size: 2em;
+        margin: 0.5em;
+    }
+    
+    .boxes-text{
+        display: flex;
+        flex-direction: column;
+        margin-top: 6em;
+        margin-left: 5em;
+    }
+    
+    .text-box{
+        width: 150vh;
+        height: 3em;
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+        margin-left: 1em;
+    }
+    
+    .color-box{
+        background-color: #c4c4c4;
+    }
+    
+    .end-box{
+        height: 10em;
+    }
+    
+    hr{
+        color: #BABABA;
+        width: 84em;
+    }
+
+
+
+}

@@ -1,0 +1,126 @@
+.page-controle{
+
+    .main{
+        display: flex;
+        flex-direction: row;
+    
+    }
+    
+    .head{
+        display: flex;
+        flex-direction: row;
+        background-color: #F8CA00;
+        height: 17vh;
+    } 
+    
+    .logo{
+       margin-top: 15px;
+        height: 8em;
+    }
+    
+    .menu-right{
+        display: flex;
+        flex-direction: column;
+        background-color: #404040;
+        width: 40vh;
+        height: 100vh;
+    }
+    
+    .background{
+        display: flex;
+        flex-direction: column;
+    
+        background-color: #000000;
+        width: 200vh;
+        height: 100vh; 
+    }
+    
+    .img-adm{
+        width: 8em;
+        height: 8em;
+        border-radius: 10em;
+    }
+    
+    .adm-area{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .adm-margin{
+        margin: 1em !important; 
+    }
+    
+    .subt1{
+        color: #ffffff;
+        font-size: 2em;
+        margin: 0.5em;
+    }
+    
+    hr{
+        color: #BABABA;
+        width: 84em;
+    }
+    
+    .top-control{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .boxes{
+        margin: 1em;
+    }
+    
+    .subt2{
+        color: #ffffff;
+        margin: 0.5em;
+        margin-right: 1em;
+        font-size: 2em;
+    }
+    
+    .text1{
+        background-color: #c4c4c4;
+        border: 3px solid #ffffff;
+        width: 15em;
+        height: 2.5em;
+        margin-left: 1em;
+    }
+    
+    .buttons{
+        margin: 3em;
+    }
+    
+    button{
+        background-color: #c4c4c4;
+        border: 3px solid #ffffff;
+        font-size: 1.5em;
+        border-radius: 1em;
+        width: 5em;
+        height: 2em;
+        margin-left: 1em;
+    }
+    
+    .main-control{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .text2{
+        margin: 1em;
+        height: 20em;
+    }
+    
+    .footer-control{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .b2{
+        margin-right: 3em;
+        margin-top: 1em;
+    }
+
+
+
+}

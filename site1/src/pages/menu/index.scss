@@ -1,0 +1,69 @@
+.page-menu{
+
+    .main{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .head{
+        display: flex;
+        flex-direction: row;
+        background-color: #F8CA00;
+        height: 17vh;
+    }
+    
+    .logo{
+        margin-top: 15px;
+        height: 8em;
+    }
+    
+    .menu-right{
+        display: flex;
+        flex-direction: column;
+        background-color: #404040;
+        width: 40vh;
+        height: 100vh;
+    }
+    
+    .background{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+        width: 100em; 
+        height: 100vh;
+    }
+    
+    .img-adm{
+        width: 8em;
+        height: 7em;
+        border-radius: 10em;
+    }
+    
+    .back-img{
+        width: 25em;
+        margin: 2em;
+    
+    }
+    
+    .adm-area{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .adm-margin{
+        margin: 1em !important; 
+    }
+    
+    .subt1{
+        color: #ffffff;
+        font-size: 2em;
+        margin: 0.5em;
+    }
+    
+    hr{
+        color: #BABABA;
+        width: 18em;
+    }
+}
