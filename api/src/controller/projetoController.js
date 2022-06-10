@@ -1,4 +1,4 @@
-import{ inserirComanda, buscarPorId, removerComanda, alterarComanda }from '../repository/filmeRepository.js';
+import{ inserirComanda, buscarPorCodigo, removerComanda, alterarComanda }from '../repository/projetoRepository.js';
 
 import { Router } from 'express'
 
@@ -47,7 +47,7 @@ server.post('/comanda', async (req, resp) =>{
 server.get('/comanda/:id' , async (req,resp)=> {
     try{
         const id = Number(req.params.id);
-        const resposta = await buscarPorId(id);
+        const resposta = await buscarPorCodigo(id);
 
         if(!resposta)
             resp.status(404).send([])
@@ -119,3 +119,5 @@ server.put('/comanda/:id' , async (req,resp)=> {
         })
     }
 })
+
+export default server;
