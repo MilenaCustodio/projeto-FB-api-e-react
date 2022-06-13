@@ -3,15 +3,15 @@ import { useNavigate } from 'react-router-dom'
 
 import storage from 'local-storage'
 import LoadingBar from 'react-top-loading-bar'
-import {usestate, useRef, useEffect} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import './index.scss';
 
 
-export default function index() {
-    const [email, setEmail] = usestate('');
-    const [senha, setSenha] = usestate('');
-    const [erro, setErro] = usestate('');
-    const [carregando, setCarregando] = usestate(false);
+export default function Index() {
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const [erro, setErro] = useState('');   
+    const [carregando, setCarregando] = useState(false);
     
     const navigate = useNavigate();
     const ref = useRef();
@@ -71,8 +71,8 @@ export default function index() {
                     <hr/>
                 </div>
 
-                <a href='/menu'><div class="button" onClick={entrarClick} disabled= {carregando}>Entrar</div></a>
-                <div>
+                <button class="button" onClick={entrarClick} disabled= {carregando}>Entrar</button>
+                <div className='erroadm'>
                     {erro}
                 </div>
             </div>

@@ -4,7 +4,7 @@ import './index.scss';
 
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
-import {ToastContainer} from 'react-toastify'
+import {ToastContainer} from 'react-toastify';
 
 import PaginaPrincipal from './pages/home/index.js';
 import Admin from './pages/admin/index.js';
@@ -18,6 +18,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <ToastContainer/>
       <Routes>
         <Route path = '/' element={<PaginaPrincipal />} />
         <Route path = '/admin' element={<Admin />} />

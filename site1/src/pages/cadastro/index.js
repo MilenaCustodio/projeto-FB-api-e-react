@@ -4,22 +4,35 @@ import { useState } from 'react';
 import { toast} from 'react-toastify'
 
 
-import { inserirComanda} from '../../api/projetoApi'
+import { inserirComanda, alterarComanda} from '../../api/projetoApi'
 import storage from 'local-storage'
 
 
 
-export default function index() {
+export default function Index() {
     const[nome,setNome] = useState('');
     const[quantidade,setQuantidade] = useState(0);
     const[mesa,setMesa] = useState(0);
     const[codigo,setCodigo] = useState(0);
     const[data,setData] = useState(0);
+    const[id,setId] = useState(0);
+
    
     async function registrarClick( ) {
         try{
             const usuario = storage('usuario-logado', id);
-            const r = await inserirComanda(nome,quantidade,mesa,codigo,data, usuario);
+            
+          
+            if (id===0) {
+                const r = await inserirComanda(nome,quantidade,mesa,codigo,data);
+                setId(r.id);
+            
+            
+            }
+            else{
+                 await alterarComanda(nome,quantidade,mesa,codigo,data);
+            }
+            
             
             toast('Comanda cadastrada com sucesso!');
         }catch(err){
@@ -28,11 +41,21 @@ export default function index() {
         }
 
     }
+
+    function novoClick(){
+        setId(0);
+        setNome('');
+        setQuantidade(0);
+        setMesa(0);
+        setCodigo(0);
+        setData(0);
+        
+    }
+
     
     return(
 
         <main className='page-cadastro'>
-            <ToastContainer/>
 
             <header class="head">
                 <a href='/'><img class="logo" src="/images/logo.png"  alt=""/></a>
@@ -108,6 +131,7 @@ export default function index() {
                     <div class="right-buttons">
 
                     <button class="buttons-cadastro" onClick={registrarClick}>Registrar</button>
+                    <button class="buttons-cadastro" onClick={novoClick}>Novo</button>
                     <h2 class="subt1">Data Cadastro *</h2>                    
                     <input class="select-box date" type="date" name="" id="" value={data} onChange={e => setData(e.target.value)}/>
                 

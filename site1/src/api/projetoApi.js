@@ -4,12 +4,21 @@ const api = axios.create({
 })
 
 export async function inserirComanda(nome,quantidade, mesa, codigo, data, descricao, valor)  {
-    const resposta = await api.post('/comanda', {
+    const resposta = await api.post(`/comanda`, {
         nome: nome,
         quantidade: quantidade,
         mesa: mesa,
         codigo: codigo,
         data: data,
+        descricao: descricao,
+        valor: valor
+    })
+    return resposta.data;
+}
+
+export async function alterarComanda(id,descricao, valor)  {
+    const resposta = await api.put(`/comanda/${id}`, {
+    
         descricao: descricao,
         valor: valor
     })

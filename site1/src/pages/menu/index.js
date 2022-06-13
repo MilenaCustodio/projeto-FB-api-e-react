@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import './index.scss';
 
-export default function index() {
+export default function Index() {
 
     const navigate = useNavigate();
 

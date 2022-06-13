@@ -1,4 +1,4 @@
-import{ inserirComanda, buscarPorCodigo, removerComanda, alterarComanda }from '../repository/projetoRepository.js';
+import{ inserirComanda, removerComanda, alterarComanda }from '../repository/projetoRepository.js';
 
 import { Router } from 'express'
 
@@ -23,12 +23,6 @@ server.post('/comanda', async (req, resp) =>{
             if(!novaComanda.data)
             throw new Error('data do pedido é obrigatória!');
 
-            if(!novaComanda.descricao)
-            throw new Error('descrição do pedido é obrigatório!');
-            
-            if(!novaComanda.valor)
-            throw new Error('Valor é obrigatória!');
-            
             if(!novaComanda.usuario)
             throw new Error('usuario nao logado!');
 
@@ -82,21 +76,6 @@ server.put('/comanda/:id' , async (req,resp)=> {
     try{
         const {id} = req.params;
         const novaComanda =req.body;
-
-        if(!novaComanda.nome)
-            throw new Error('Nome na comanda é obrigatório!');
-
-            if(!novaComanda.quantidade)
-            throw new Error('quantidade é obrigatório!');
-            
-            if(novaComanda.mesa)
-            throw new Error('numero da mesa é obrigatório!');
-
-            if(!novaComanda.codigo)
-            throw new Error('código é obrigatório!');
-
-            if(!novaComanda.data)
-            throw new Error('data do pedido é obrigatória!');
 
             if(!novaComanda.descricao)
             throw new Error('descrição do pedido é obrigatório!');

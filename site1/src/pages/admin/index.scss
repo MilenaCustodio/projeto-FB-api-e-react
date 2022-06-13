@@ -64,6 +64,11 @@ $url: 'http://localhost:3000';
         padding: 10px;
         border-radius: 0.5em;
     }
+    .erroadm{
+        color: red;
+        margin: 2em;
+        font-size: 18px;
+    }
 
     @media(max-width: 1024px){
         .background2{
