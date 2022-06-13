@@ -4,11 +4,11 @@ import { con } from './connection.js';
 
 export async function inserirComanda(comanda) {
     const comando=
-    `INSERT INTO tb_comanda  (id_funcionario, nm_cliente, nr_pessoas, nr_mesa, ds_codigo, dt_pedido, ds_pedido, vl_final )
+    `INSERT INTO tb_comanda  (id_funcionario, nm_cliente, nr_pessoas, nr_mesa, ds_codigo, dt_pedido )
                     VALUES (?, ?, ?, ?, ?, ?)`
 
 
-    const [resposta] = await con.query (comando,[comanda.usuario, comanda.nome, comanda.quantidade, comanda.mesa, comanda.codigo, comanda.data,comanda.descricao, comanda.valor]);
+    const [resposta] = await con.query (comando,[comanda.usuario, comanda.nome, comanda.quantidade, comanda.mesa, comanda.codigo, comanda.data]);
     comanda.id = resposta.insertId;
 
     return comanda;

@@ -14,8 +14,7 @@
     }
     
     .logo{
-        margin-top: 15px;
-        height: 8em;
+        margin-left: 3em;
     }
     
     .menu-right{
@@ -50,8 +49,8 @@
     }
     
     .input-date-header{
-        width: 18em;
-        height: 4em;
+        width: 15em;
+        height: 2em;
         background-color: #BABABA;
     }
     
@@ -97,13 +96,12 @@
     .boxes-text{
         display: flex;
         flex-direction: column;
-        margin-top: 6em;
-        margin-left: 5em;
+        padding-top: 3.5em;
     }
     
     .text-box{
-        width: 150vh;
-        height: 3em;
+        width: 95%;
+        height: 2.5em;
         box-shadow: 0 0 0 0;
         border: 0 none;
         outline: 0;
@@ -120,9 +118,8 @@
     
     hr{
         color: #BABABA;
-        width: 84em;
+        width: 100%;
     }
-
 
 
 }

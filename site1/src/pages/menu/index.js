@@ -1,15 +1,26 @@
+import storage from 'local-storage'
+
+import { useNavigate } from 'react-router-dom';
+
+
 import './index.scss';
 
-
-
 export default function index() {
+
+    const navigate = useNavigate();
+
+    function voltarClick() {
+        storage.remove( 'usuario-logado');
+        navigate('/');
+
+    }
 
     return(
 
         <main className='page-menu'>
 
             <header class="head">
-                <a href='/home'><img class="logo" src="/images/logo.png" alt=""/></a>
+                <a href='/home' onClick={voltarClick} ><img class="logo" src="/images/logo.png" alt=""/></a>
             </header>
 
             <div class="main">

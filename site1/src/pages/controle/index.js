@@ -44,16 +44,10 @@ export default function index() {
                                 <input class="text1" type="text" name="" id=""/>
                             </div>
 
-                            <div class="box">
-                                <h2 class="subt2">Data*</h2>
-                                <input class="text1" type="date" name="" id=""/>
-                            </div>
-
                         </div>
 
                         <div class="buttons">
                             <button>Editar</button>
-                            <button>Concluir</button>
                         </div>
                         
                     </div>

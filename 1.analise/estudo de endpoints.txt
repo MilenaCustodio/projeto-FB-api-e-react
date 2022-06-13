@@ -23,10 +23,8 @@ request body
     "nome": "",
     "quantidade": 0,
     "mesa": 0,
-    "codigo": ,
+    "codigo": 0 ,
     "data": "2020-10-00",
-    "descricao": "",
-    "valor": 0.0, 
     "usuario": 0
     
 }
@@ -39,8 +37,6 @@ response
     "mesa": 0,
     "codigo": ,
     "data": "2020-10-00",
-    "descricao": "",
-    "valor": 0.0, 
     "usuario": 0
 }
 

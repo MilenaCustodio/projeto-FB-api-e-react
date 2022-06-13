@@ -2,7 +2,7 @@ USE FastBurguerDB;
 
 -- carga inicial funcionario admin
 INSERT INTO tb_funcionario (nm_funcionario, ds_email, ds_senha)
-     VALUES ('admin', 'admin', '12345');
+     VALUES ('admin', 'admin@admin.com.br', '12345');
 
 
 
@@ -12,15 +12,15 @@ select id_funcionario    id,
        nm_funcionario    nome,
        ds_email            email
   from tb_funcionario
- where ds_email         = 'admin'
+ where ds_email         = 'admin@admin.com.br'
    and ds_senha            = '12345';
 
 
 
 
 -- CSU02:: cadastrar nova comanda
-INSERT INTO tb_comanda (id_funcionario, vl_final, ds_codigo, nr_mesa, dt_pedido, ds_pedido, nr_pessoas, nm_cliente)
-     VALUES             (1, 100, 1, 1, '2020-02-11', 'burguers', 5, 'irineu');
+INSERT INTO tb_comanda (id_funcionario, ds_codigo, nr_mesa, dt_pedido, nr_pessoas, nm_cliente)
+     VALUES             (1, 1, 1, '2020-02-11', 5, 'irineu');
 
 
 
