@@ -14,8 +14,26 @@ export default function Index() {
     const[quantidade,setQuantidade] = useState(0);
     const[mesa,setMesa] = useState(0);
     const[codigo,setCodigo] = useState(0);
-    const[data,setData] = useState(0);
+    const[data,setData] = useState('');
     const[id,setId] = useState(0);
+ 
+    const opcoesmesa = [
+        {id: 1, mesa: 1},
+        {id: 2, mesa: 2},
+        {id: 3, mesa: 3},
+        {id: 4, mesa: 4},
+        {id: 5, mesa: 5},
+        {id: 6, mesa: 6},
+    ];
+
+    const opcoesqtd = [
+        {id: 1, qtd: 1},
+        {id: 2, qtd: 2},
+        {id: 3, qtd: 3},
+        {id: 4, qtd: 4},
+        {id: 5, qtd: 5},
+        {id: 6, qtd: 6},
+    ];
 
    
     async function registrarClick( ) {
@@ -88,37 +106,27 @@ export default function Index() {
 
                         <div class="cod-buttons">
                             <h2 class="box-cod">Código</h2>
-                            <button class="button-cod" value={codigo} onChange={e => setCodigo(e.target.value)}>GERAR CÓDIGO</button>
+                            <input class="select-box text2" type="text" name="" id="" value={codigo} onChange={e => setCodigo(e.target.value)}/>
                         </div>
 
                         <div class="boxes">
                             <h2 class="subt1">Nº Mesa *</h2>
-                            <select class="select-box" value={mesa} onChange={e => setMesa(e.target.value)}>
-                                <option value="">- Selecione -</option>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                                <option value="">5</option>
-                                <option value="">6</option>
+                            <select value={mesa} onChange={e => setMesa(e.target.value)} class="select-box" >
+                                <option  value="">- Selecione -</option>
+                                {opcoesmesa.map((item) => (
+                                    <option value={item.id}>{item.mesa}</option>
+                                ))}
                             </select>
-                        
-
                         </div>
 
                         <div class="boxes">
                             <h2 class="subt1">Quantidade de pessoas *</h2>
-                            <select class="select-box" value={quantidade} onChange={e => setQuantidade(e.target.value)}>
-                                <option value="">- Selecione -</option>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                                <option value="">5</option>
-                                <option value="">6</option>
+                            <select value={quantidade} onChange={e => setQuantidade(e.target.value)} class="select-box" >
+                                <option  value="">- Selecione -</option>
+                                {opcoesqtd.map((item) => (
+                                    <option value={item.id}>{item.qtd}</option>
+                                ))}
                             </select>
-                        
-
                         </div>
 
                         <div class="boxes">
@@ -136,7 +144,6 @@ export default function Index() {
                     <input class="select-box date" type="date" name="" id="" value={data} onChange={e => setData(e.target.value)}/>
                 
                     </div>
-
             
                 </div>
 

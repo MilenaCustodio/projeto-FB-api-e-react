@@ -1,4 +1,4 @@
-import{ inserirComanda, removerComanda, alterarComanda }from '../repository/projetoRepository.js';
+import{ inserirComanda, removerComanda, alterarComanda, buscarPorData,buscarPorCodigo }from '../repository/projetoRepository.js';
 
 import { Router } from 'express'
 
@@ -14,7 +14,7 @@ server.post('/comanda', async (req, resp) =>{
             if(!novaComanda.quantidade)
             throw new Error('quantidade é obrigatório!');
             
-            if(novaComanda.mesa)
+            if(!novaComanda.mesa)
             throw new Error('numero da mesa é obrigatório!');
 
             if(!novaComanda.codigo)
@@ -23,15 +23,11 @@ server.post('/comanda', async (req, resp) =>{
             if(!novaComanda.data)
             throw new Error('data do pedido é obrigatória!');
 
-            if(!novaComanda.usuario)
-            throw new Error('usuario nao logado!');
-
-
-
         const comandaInserida = await inserirComanda(novaComanda);
 
         resp.send(comandaInserida);
     } catch(err){
+        console.log(err.message)
         resp.status(400).send({
             erro: err.message
         })
@@ -42,6 +38,22 @@ server.get('/comanda/:id' , async (req,resp)=> {
     try{
         const id = Number(req.params.id);
         const resposta = await buscarPorCodigo(id);
+
+        if(!resposta)
+            resp.status(404).send([])
+        else
+            resp.send(resposta);
+    } catch (err) {
+        resp.status(400).send ({
+            erro: err.message
+        })
+    }
+})
+
+server.get('/comanda/:id' , async (req,resp)=> {
+    try{
+        const id = Number(req.params.id);
+        const resposta = await buscarPorData(id);
 
         if(!resposta)
             resp.status(404).send([])
@@ -83,9 +95,6 @@ server.put('/comanda/:id' , async (req,resp)=> {
             if(!novaComanda.valor)
             throw new Error('Valor é obrigatória!');
             
-            if(!novaComanda.usuario)
-            throw new Error('usuario nao logado!');
-
         const resposta = await alterarComanda(id,filme);
         if(resposta != 1)
             throw new Error('Comanda não pode ser alterada.');

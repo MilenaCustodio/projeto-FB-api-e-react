@@ -16,12 +16,11 @@ export default function Index() {
     const navigate = useNavigate();
     const ref = useRef();
 
-
     useEffect(() => {
         if(storage('usuario-logado')){
             navigate('/admin');
         }
-    })
+    }, [])
     
     
     
@@ -29,12 +28,12 @@ export default function Index() {
         ref.current.continuousStart();
         setCarregando(true);
 
-         try{
-            const r = await  login(email,senha);
+        try{
+            const r = await login(email,senha);
             storage('usuario-logado', r);
 
             setTimeout(() => {
-                navigate('/admin');
+                navigate('/menu');
             }, 3000);
             
          }  catch (err) {
@@ -44,7 +43,7 @@ export default function Index() {
                  setErro(err.response.data.erro);
              }
 
-         }
+        }
 
     }
 

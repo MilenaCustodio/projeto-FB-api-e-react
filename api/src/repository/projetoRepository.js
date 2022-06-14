@@ -15,22 +15,17 @@ export async function inserirComanda(comanda) {
 }
 
 
-// export async function buscarPorCodigo(codigo) {
-//     const comando =
-//         `SELECT id_comanda       id,
-//                 nm_cliente       nome,
-//                 nr_pessoas       quantidade,
-//                 nr_mesa          mesa,
-//                 ds_codigo        codigo,
-//                 dt_pedido        data,
-//                 ds_pedido        descricao,
-//                 vl_final         valor
-//         FROM tb_comanda
-//         WHERE ds_codigo=?` ;
+export async function buscarPorCodigo(codigo) {
+    const comando =
+        `SELECT id_comanda       id,
+                ds_pedido        descricao,
+                vl_final         valor
+        FROM tb_comanda
+        WHERE ds_codigo=?` ;
 
-//     const [linhas] = await con.query (comando, [` %${codigo}%`]);
-//     return linhas;
-// }
+    const [linhas] = await con.query (comando, [` %${codigo}%`]);
+    return linhas;
+}
 
 export async function buscarPorData(data) {
     const comando =
@@ -58,7 +53,9 @@ export async function removerComanda(id) {
 export async function alterarComanda(id,comanda) {
     const comando=
     `UPDATE tb_comanda 
-    SET vl_final     = ?,
+    SET 
+        usuario      = ?,
+        vl_final     = ?,
         ds_pedido    = ?`
     const [resposta] = await con.query(comando, [comanda.descricao, comanda.valor]);
     return resposta.affectedRows;
