@@ -2,7 +2,7 @@ USE FastBurguerDB;
 
 -- carga inicial funcionario admin
 INSERT INTO tb_funcionario (nm_funcionario, ds_email, ds_senha)
-     VALUES ('admin', 'admin2@gmail.com', '12345');
+     VALUES ('Felipe', 'admin2@gmail.com', '12345');
 
 
 
@@ -10,10 +10,10 @@ INSERT INTO tb_funcionario (nm_funcionario, ds_email, ds_senha)
 -- CSU01:: efetuar login
 select id_funcionario    id,
        nm_funcionario    nome,
-       ds_email           email
+       ds_email          email
   from tb_funcionario
  where ds_email         = 'admin2@gmail.com'
-   and ds_senha            = '12345';
+   and ds_senha         = '12345';
 
 
 
@@ -41,7 +41,7 @@ DELETE FROM tb_comanda
 
 
 
--- -- CSU05:: consultar todos as comandas por codigo
+-- -- CSU05:: buscar todos as comandas por codigo
 SELECT id_comanda        id,
        vl_final         valor
        ds_codigo        codigo,
