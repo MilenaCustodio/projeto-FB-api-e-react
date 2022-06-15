@@ -12,10 +12,10 @@ $url: 'http://localhost:3000';
             height: 7em;
         }
 
-        .logo{
-            margin-top: 15px;
-            height: 6em;
-        }
+        // .logo{
+        //     margin-top: 15px;
+        //     height: 6em;
+        // }
 
         .login{
             float: right;
@@ -78,7 +78,7 @@ $url: 'http://localhost:3000';
             text-align: center;
         }
         .img-box{
-            margin-top: 15em;
+            margin-top: 10em;
             width: 30em;
         }
         .img1{
@@ -91,7 +91,10 @@ $url: 'http://localhost:3000';
         }
 
         .faixa3{
+            display: flex;
+            flex-direction: column;
             background-color: #000000;
+
         }
 
         .head-cardapio{
@@ -208,11 +211,11 @@ $url: 'http://localhost:3000';
             justify-content: center;
             background-color: #F8CA00;
             height: 10em;
-            padding: 5em;
+            padding: 2em;
         }
 
         .fx5-t{
-            font-size: 2em;
+            font-size: 1.5em;
             width: 25em;
             text-align: center;
         }

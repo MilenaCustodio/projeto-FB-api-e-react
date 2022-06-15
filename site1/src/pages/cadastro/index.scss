@@ -13,12 +13,7 @@
         background-color: #F8CA00;
         height: 17vh;
     }
-    
-    .logo{
-        margin-top: 1em;
-        margin-left: 5em;
-    }
-    
+       
     .menu-right{
         display: flex;
         flex-direction: column;
@@ -99,7 +94,7 @@
     .boxes{
         display: flex;
         flex-direction: column;
-        padding: 2em;
+        padding: 1.5em;
     
     }
     
@@ -117,7 +112,10 @@
         cursor: pointer;
     }
 
-    
+    .text{
+        width: 25em;
+        font-size: 1em;
+    }
     
     .date{
         padding: 0.5em;
@@ -141,14 +139,10 @@
         border-radius: 1em;
         text-align: center;
         margin-top: 1em;
+        margin-bottom: 2em;
         font-size: 1.5em;
         cursor: pointer;
     }
     
-    .end{
-        margin-top: 15em;
-    }
-    
-
 
 }

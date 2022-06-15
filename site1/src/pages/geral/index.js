@@ -41,17 +41,42 @@ export default function Index() {
                         </div>
                         <hr/>
                     </header>
-                    <main class="boxes-text">
+                    <main class="boxes">
 
-                        <input class="text-box" type="text" name="" id=""/>
-                        <input class="text-box color-box" type="text" name="" id=""/>
-                        <input class="text-box" type="text" name="" id=""/>
-                        <input class="text-box color-box" type="text" name="" id=""/>
-                        <input class="text-box " type="text" name="" id=""/>
-                        <input class="text-box color-box" type="text" name="" id=""/>
-                        <input class="text-box " type="text" name="" id=""/>
-                        <input class="text-box color-box" type="text" name="" id=""/>
-                        <textarea class="text-box end-box" name="" id="" cols="30" rows="10"></textarea>
+                        <table>
+
+                            <thead>
+                                <tr>
+
+                                    <th>Cod</th>
+                                    <th>Nome</th>
+                                    <th>Valor</th>
+
+                                </tr>
+
+                            </thead>
+                            
+                            <tbody>
+
+
+                                <tr>
+
+                                    <td>dsadadas</td>
+                                    <td>dsadsad</td>
+                                    <td>wasdwa</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>dasdsa</td>
+                                    <td>sadasdas</td>
+                                    <td>dsawwwdasdsada</td>
+
+                                </tr>
+        
+                            </tbody>
+                        </table>
 
                     </main>
                     

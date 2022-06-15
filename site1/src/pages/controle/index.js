@@ -27,13 +27,13 @@ export default function Index() {
                 
               
                 if (id===0) {
-                    const r = await inserirComanda(descricao, valor, codigo);
+                    const r = await inserirComanda(descricao, valor);
                     setId(r.id);
                     toast('Comanda cadastrada com sucesso!');
                 
                 }
                 else{
-                     await alterarComanda(descricao, valor, codigo);
+                     await alterarComanda(descricao, valor);
                      toast('Comanda alterada com sucesso!');
                     }
                 

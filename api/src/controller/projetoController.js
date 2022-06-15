@@ -50,10 +50,10 @@ server.get('/comanda/:id' , async (req,resp)=> {
     }
 })
 
-server.get('/comanda/:id' , async (req,resp)=> {
+server.get('/comanda?' , async (req,resp)=> {
     try{
-        const id = Number(req.params.id);
-        const resposta = await buscarPorData(id);
+        const data = Number(req.query.data);
+        const resposta = await buscarPorData(data);
 
         if(!resposta)
             resp.status(404).send([])

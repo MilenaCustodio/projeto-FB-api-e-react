@@ -29,7 +29,7 @@ export async function buscarPorCodigo(codigo) {
 
 export async function buscarPorData(data) {
     const comando =
-        `SELECT id_comanda        id,
+        `SELECT id_comanda       id,
                 nm_cliente       nome,
                 ds_codigo        codigo,
                 dt_pedido        data,
@@ -54,7 +54,6 @@ export async function alterarComanda(id,comanda) {
     const comando=
     `UPDATE tb_comanda 
     SET 
-        usuario      = ?,
         vl_final     = ?,
         ds_pedido    = ?`
     const [resposta] = await con.query(comando, [comanda.descricao, comanda.valor]);

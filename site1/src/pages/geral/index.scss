@@ -12,11 +12,7 @@
         background-color: #F8CA00;
         height: 17vh;
     }
-    
-    .logo{
-        margin-left: 3em;
-    }
-    
+       
     .menu-right{
         display: flex;
         flex-direction: column;
@@ -89,11 +85,11 @@
     
     .subt1{
         color: #ffffff;
-        font-size: 2em;
+        font-size: 1.5em;
         margin: 0.5em;
     }
     
-    .boxes-text{
+    .boxes{
         display: flex;
         flex-direction: column;
         padding-top: 3.5em;
@@ -108,10 +104,6 @@
         margin-left: 1em;
     }
     
-    .color-box{
-        background-color: #c4c4c4;
-    }
-    
     .end-box{
         height: 10em;
     }
@@ -121,5 +113,17 @@
         width: 100%;
     }
 
+    table{
+        background-color: #BABABA;
+    }
+
+    th{
+        background-color: #cfcfcf;
+    }
+
+    td{
+        background-color: #ffffff;
+        text-align: center;
+    }
 
 }
