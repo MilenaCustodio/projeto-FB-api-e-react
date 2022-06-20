@@ -18,6 +18,6 @@ CREATE TABLE tb_comanda(
     dt_pedido           datetime,
     ds_pedido           varchar(15000),
     nr_pessoas          int,
-    nm_cliente          varchar(200)
-    FOREIGN KEY (id_funcionario) REFERENCES tb_funcionario(id_funcionario)
+    nm_cliente          varchar(200),
+    FOREIGN KEY (id_funcionario) REFERENCES tb_funcionario (id_funcionario)
 );

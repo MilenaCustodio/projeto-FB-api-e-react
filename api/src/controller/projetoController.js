@@ -34,15 +34,15 @@ server.post('/comanda', async (req, resp) =>{
     }
 })
 
-server.get('/comanda/:id' , async (req,resp)=> {
+server.get('/comanda/codigo' , async (req , resp)=> {
     try{
-        const id = Number(req.params.id);
-        const resposta = await buscarPorCodigo(id);
+        const { codigo } = req.query;
+        const resposta = await buscarPorCodigo(codigo);
 
         if(!resposta)
-            resp.status(404).send([])
-        else
-            resp.send(resposta);
+            throw new Error('Comanda não encontrada');
+
+            resp.send(resposta)
     } catch (err) {
         resp.status(400).send ({
             erro: err.message

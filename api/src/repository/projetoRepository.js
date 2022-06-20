@@ -17,13 +17,18 @@ export async function inserirComanda(comanda) {
 
 export async function buscarPorCodigo(codigo) {
     const comando =
-        `SELECT id_comanda       id,
-                ds_pedido        descricao,
-                vl_final         valor
-        FROM tb_comanda
-        WHERE ds_codigo=?` ;
+    `SELECT id_comanda        id,
+            vl_final         valor,
+            ds_codigo        codigo,
+            nr_mesa          mesa,
+            dt_pedido        data,
+            ds_pedido        descricao,
+            nr_pessoas       quantidade,
+            nm_cliente       nome
+    FROM tb_comanda
+    WHERE ds_codigo     like   ?`
 
-    const [linhas] = await con.query (comando, [` %${codigo}%`]);
+    const [ linhas ] = await con.query(comando, [` %${codigo}%`]);
     return linhas;
 }
 

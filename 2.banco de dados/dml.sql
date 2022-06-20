@@ -28,7 +28,6 @@ INSERT INTO tb_comanda (id_funcionario, ds_codigo, nr_mesa, dt_pedido, nr_pessoa
 UPDATE tb_comanda 
    SET vl_final     = 250,
        ds_pedido    = 'bebidas'
-           
  WHERE id_comanda = 1;
 
 
@@ -41,9 +40,9 @@ DELETE FROM tb_comanda
 
 
 
--- -- CSU05:: buscar todos as comandas por codigo
+-- CSU05:: buscar todos as comandas por codigo
 SELECT id_comanda        id,
-       vl_final         valor
+       vl_final         valor,
        ds_codigo        codigo,
        nr_mesa          mesa,
        dt_pedido        data,
@@ -51,7 +50,7 @@ SELECT id_comanda        id,
        nr_pessoas       quantidade,
        nm_cliente       nome
   FROM tb_comanda
- WHERE ds_codigo        like '%a%';
+ WHERE ds_codigo        like '%1%';
 
 
 
@@ -63,4 +62,4 @@ SELECT id_comanda        id,
        dt_pedido        data,
        nm_cliente       nome
   FROM tb_comanda
- WHERE dt_pedido        like '%a%';
+ WHERE dt_pedido        like '%02%';
