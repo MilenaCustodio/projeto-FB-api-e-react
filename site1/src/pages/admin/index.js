@@ -66,7 +66,7 @@ export default function Index() {
 
                 <div class="box-margin">
                     <div class="user">Senha</div>
-                    <input class="box" type='password' placeholder='***' value={senha} onChange={e => setSenha(e.target.value)} />
+                    <input class="box" type='password' placeholder='****' value={senha} onChange={e => setSenha(e.target.value)} />
                     <hr/>
                 </div>
 

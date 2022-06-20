@@ -60,8 +60,12 @@ export default function Index() {
                     <header class="main-header">
                         <div class="cont-header">
                             <h4>Data de atendimento*</h4>
-                            <input type="text" placeholder = 'Buscar filmes por data' class="input-date-header" value = {busca} onChange={e => setBusca(e.target.value)} /> 
-                            <img class='icon-busca' src = '/images/icon-buscar.svg' alt= 'buscar' onClick={filtrar} />
+
+                            <div class="pesquisa">
+                                <input type="text" placeholder = 'Buscar comanda por data' class="input-date-header" value = {busca} onChange={e => setBusca(e.target.value)} /> 
+                                <img class='icon-busca' src = '/images/icon-buscar.svg' alt= 'buscar' onClick={filtrar} />
+                            </div>
+                        
                         </div>
                         <hr/>
                     </header>
@@ -82,7 +86,35 @@ export default function Index() {
                             
                             <tbody>
 
-                            {comanda.map(item =>
+
+
+                                 <tr>
+
+                                    <td>12/02/2020</td>
+                                    <td>Milena</td>
+                                    <td>120,00</td>
+
+                                </tr>
+
+                                
+                                 <tr>
+
+                                    <td>15/08/2020</td>
+                                    <td>William</td>
+                                    <td>80,00</td>
+
+                                </tr>
+
+                                 <tr>
+
+                                    <td>14/08/2020</td>
+                                    <td>Felipe</td>
+                                    <td>50,00</td>
+
+                                </tr>
+
+
+                            {/* {comanda.map(item =>
                             <tr>
 
                                 <td>{item.data}</td>
@@ -92,7 +124,7 @@ export default function Index() {
                             </tr>
                             
                             )}
-                                
+                                 */}
         
                             </tbody>
                         </table>

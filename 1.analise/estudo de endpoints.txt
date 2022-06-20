@@ -24,8 +24,7 @@ request body
     "quantidade": 0,
     "mesa": 0,
     "codigo": 0 ,
-    "data": "2020-10-00",
-    "usuario": 0
+    "data": "2020-10-00"
     
 }
 
@@ -36,8 +35,7 @@ response
     "quantidade": 0,
     "mesa": 0,
     "codigo": ,
-    "data": "2020-10-00",
-    "usuario": 0
+    "data": "2020-10-00"
 }
 
 ///////////////////////////////////////////

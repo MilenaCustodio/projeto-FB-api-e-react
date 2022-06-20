@@ -9,8 +9,6 @@ export default function Index() {
             <header class="head">
                 
                 <Link to='/'> <img class="logo"  src='/images/logo.png' alt=''/> </Link>
-                <Link class="links" to="/">CARDÁPIO</Link>
-                <Link class="links" to="/"> CONTATO </Link>
                 <Link class="login links" to='/admin'>LOGIN</Link>
             </header>
 
@@ -49,15 +47,6 @@ export default function Index() {
 
                 <h1 class="t3">CARDÁPIO</h1>
 
-                <div class="head-cardapio">
-
-                    <h2 class="subt3">BURGUERS</h2>
-                    <h2 class="subt3">EXTRAS</h2>
-                    <h2 class="subt3">ACOMPANHANTOS</h2>
-                    <h2 class="subt3">SOBREMESAS</h2>
-                    <h2 class="subt3">BEBIDAS</h2>
-
-                </div>
 
                 <div class="main-cardapio">
 

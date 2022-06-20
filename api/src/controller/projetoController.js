@@ -95,7 +95,7 @@ server.put('/comanda/:id' , async (req,resp)=> {
             if(!novaComanda.valor)
             throw new Error('Valor é obrigatória!');
             
-        const resposta = await alterarComanda(id,filme);
+        const resposta = await alterarComanda(id,novaComanda);
         if(resposta != 1)
             throw new Error('Comanda não pode ser alterada.');
         else

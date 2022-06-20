@@ -7,7 +7,7 @@ $url: 'http://localhost:3000';
         .head{
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
             background-color: #F8CA00;
             height: 7em;
         }
@@ -104,8 +104,8 @@ $url: 'http://localhost:3000';
         }
 
         .t3{
+            color: #F8CA00;
             font-size: 3.5em;
-            text-shadow: 4px 4px  #F8CA00;
             text-align: center;
             margin-top: 1em;
             margin-bottom: 1em;
