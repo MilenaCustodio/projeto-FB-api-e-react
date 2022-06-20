@@ -1,8 +1,31 @@
+import {listarTodasComandas, buscarPorData} from '../../api/projetoApi'
+
+
 import './index.scss';
+import {useState, useEffect} from 'react'
 
 
 
 export default function Index() {
+    const[ comanda, setComanda] = useState([]);
+    const [busca, setBusca] = useState('');
+
+
+
+    async function filtrar(){
+        const resp = await buscarPorData(filtrar);
+        setComanda(resp);
+    }
+
+    async function carregarTodasComandas(){
+        const resp = await listarTodasComandas();
+        setComanda(resp);
+    }
+
+
+    useEffect(() => {
+        carregarTodasComandas();
+    }, []);
 
     return(
 
@@ -37,7 +60,8 @@ export default function Index() {
                     <header class="main-header">
                         <div class="cont-header">
                             <h4>Data de atendimento*</h4>
-                            <input type="date" class="input-date-header"/>
+                            <input type="text" placeholder = 'Buscar filmes por data' class="input-date-header" value = {busca} onChange={e => setBusca(e.target.value)} /> 
+                            <img class='icon-busca' src = '/images/icon-buscar.svg' alt= 'buscar' onClick={filtrar} />
                         </div>
                         <hr/>
                     </header>
@@ -48,7 +72,7 @@ export default function Index() {
                             <thead>
                                 <tr>
 
-                                    <th>Cod</th>
+                                    <th>Data</th>
                                     <th>Nome</th>
                                     <th>Valor</th>
 
@@ -58,22 +82,17 @@ export default function Index() {
                             
                             <tbody>
 
+                            {comanda.map(item =>
+                            <tr>
 
-                                <tr>
+                                <td>{item.data}</td>
+                                <td>{item.nome}</td>
+                                <td>{item.valor}</td>
 
-                                    <td>dsadadas</td>
-                                    <td>dsadsad</td>
-                                    <td>wasdwa</td>
-
-                                </tr>
-
-                                <tr>
-
-                                    <td>dasdsa</td>
-                                    <td>sadasdas</td>
-                                    <td>dsawwwdasdsada</td>
-
-                                </tr>
+                            </tr>
+                            
+                            )}
+                                
         
                             </tbody>
                         </table>

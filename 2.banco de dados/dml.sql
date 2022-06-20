@@ -2,7 +2,7 @@ USE FastBurguerDB;
 
 -- carga inicial funcionario admin
 INSERT INTO tb_funcionario (nm_funcionario, ds_email, ds_senha)
-     VALUES ('Felipe', 'admin2@gmail.com', '12345');
+     VALUES ('Felipe', 'admin2@gmail.com', 'felipe-milena');
 
 
 
@@ -13,7 +13,7 @@ select id_funcionario    id,
        ds_email          email
   from tb_funcionario
  where ds_email         = 'admin2@gmail.com'
-   and ds_senha         = '12345';
+   and ds_senha         = 'felipe-milena';
 
 
 

@@ -30,3 +30,13 @@ export async function alterarComanda(id,descricao, valor)  {
     return resposta.data;
 }
 
+
+export async function listarTodasComandas(data)  {
+    const resposta = await api.get(`/comanda`);
+    return resposta.data;
+}
+export async function buscarPorData(data)  {
+    const resposta = await api.get(`/comanda/busca?data${data}`);
+    return resposta.data;
+}
+
