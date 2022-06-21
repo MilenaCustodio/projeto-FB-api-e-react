@@ -60,7 +60,8 @@ export async function alterarComanda(id,comanda) {
     `UPDATE tb_comanda 
     SET 
         vl_final     = ?,
-        ds_pedido    = ?`
-    const [resposta] = await con.query(comando, [comanda.descricao, comanda.valor]);
+        ds_pedido    = ?
+    WHERE id_comanda = ?`
+    const [resposta] = await con.query(comando, [comanda.valor,comanda.descricao, id]);
     return resposta.affectedRows;
 }

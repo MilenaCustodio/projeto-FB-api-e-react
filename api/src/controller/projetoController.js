@@ -37,7 +37,7 @@ server.post('/comanda', async (req, resp) =>{
 server.get('/comanda/codigo' , async (req , resp)=> {
     try{
         const { codigo } = req.query;
-        const resposta = await buscarPorCodigo(codigo);
+        const resposta = await buscarPorCodigo( codigo );
 
         if(!resposta)
             throw new Error('Comanda não encontrada');
@@ -86,8 +86,8 @@ server.delete('/comanda/:id' , async (req,resp)=> {
 
 server.put('/comanda/:id' , async (req,resp)=> {
     try{
-        const {id} = req.params;
-        const novaComanda =req.body;
+        const { id } = req.params;
+        const novaComanda = req.body;
 
             if(!novaComanda.descricao)
             throw new Error('descrição do pedido é obrigatório!');
